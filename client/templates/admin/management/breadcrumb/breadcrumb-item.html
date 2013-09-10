@@ -1,0 +1,10 @@
+<template name="breadcrumb-item">
+	<li>
+        <a href="{{url}}">{{title}}</a>
+        {{#if last}}
+        <span class="divider-last">&nbsp;</span>
+        {{else}}
+        <span class="divider">&nbsp;</span>
+        {{/if}}
+	</li>
+</template>

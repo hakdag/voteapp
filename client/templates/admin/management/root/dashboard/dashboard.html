@@ -1,0 +1,14 @@
+<template name="dashboard">
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title">
+                Dashboard
+                <small> General Information </small>
+            </h3>
+        </div>
+    </div>
+
+    {{#each list}}
+        {{> answeritem}}
+    {{/each}}
+</template>

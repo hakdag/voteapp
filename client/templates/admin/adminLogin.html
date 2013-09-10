@@ -1,0 +1,10 @@
+<template name="adminLogin">
+    {{#if currentUser}}
+        {{> management}}
+    {{else}}
+        admin login page.
+            <div style="float: right">
+              {{loginButtons align="right"}}
+            </div>
+    {{/if}}
+</template>

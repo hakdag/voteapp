@@ -1,0 +1,10 @@
+<template name="breadcrumb">
+	<ul class="breadcrumb">
+		<li>
+            <a href="/admin"><i class="icon-home"></i></a><span class="divider">&nbsp;</span>
+		</li>
+        {{#each items}}
+            {{> breadcrumb-item}}
+        {{/each}}
+	</ul>
+</template>

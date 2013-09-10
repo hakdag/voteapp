@@ -1,0 +1,10 @@
+<template name="answer">
+	<div class="answer {{selected}}">
+		<div class="bar" style='width: {{percent}}%'>
+			<span class="name">{{name}}</span>
+		</div>
+	</div>
+	{{#if percent}}
+		<span class="percent">{{percent}}%</span>
+	{{/if}}
+</template>

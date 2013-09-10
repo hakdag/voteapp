@@ -1,0 +1,47 @@
+<template name="polls">
+    <div class="row-fluid">
+        <div class="span12">
+            <h3 class="page-title">
+                Polls
+                <small> General Information </small>
+            </h3>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget">
+                <div class="widget-body form">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Url</th>
+                                <th>Question</th>
+                                <th>Votes</th>
+                                <th>Create Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {{#each list}}
+                            {{> showpoll}}
+                        {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <a data-toggle="modal" href="#addPollModal" class="btn btn-primary btn-lg addpoll">Add Poll</a>
+            {{#if poll_selected}}
+            <button href="#editPollModal" class="btn btn-warning btn-lg editpoll">Edit Poll</button>
+            <button class="btn btn-danger deletepoll">Delete Poll</button>
+            {{/if}}
+        </div>
+    </div>
+    {{> addpollmodalcontainer}}
+    {{> editpollmodalcontainer}}
+</template>

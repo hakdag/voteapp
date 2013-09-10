@@ -1,0 +1,11 @@
+<template name="sidebar-item">
+    {{#if active}}
+    <li class="has-sub active">
+    {{else}}
+    <li class="has-sub">
+    {{/if}}
+		<a href="{{url}}" class="">
+			<span class="icon-box"> <i class="icon-dashboard"></i></span> {{title}}
+        </a>
+    </li>
+</template>

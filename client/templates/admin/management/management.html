@@ -1,0 +1,37 @@
+<template name="management">
+    <div id="header" class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="/">
+                    <img src="/logo.png" alt="Vote Me">
+                </a>
+                <div class="top-nav ">
+                    <ul class="nav pull-right top-menu">
+                        <li class="username">{{loginButtons align="right"}}</li>
+					</ul>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="row-fluid">
+        <div id="sidebar" class="">
+            {{> sidebar}}
+        </div>
+
+        <div id="main-content">
+            <div class="container-fluid">
+                <div class="row-fluid">
+					<div class="span12">
+                        {{> breadcrumb}}
+					</div>
+				</div>
+
+                <div id="page" class="dashboard">
+                    {{> root}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/css/admin.css">
+</template>

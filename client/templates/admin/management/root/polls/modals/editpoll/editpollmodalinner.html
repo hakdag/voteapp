@@ -1,0 +1,61 @@
+<template name="editpollmodalinner">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="closeAddPoll close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Edit poll</h4>
+            </div>
+            <div class="modal-body">
+                {{#if error}}
+                <div class="alert alert-error">{{error}}</div>
+                {{/if}}
+                {{#if success}}
+                <div class="alert alert-success">{{success}}</div>
+                {{/if}}
+                <form class="form-horizontal" role="form">
+                    <div class="control-group">
+                        <label for="Name" class="control-label">Name</label>
+                        <div class="controls">
+                            <input type="text" id="Name" placeholder="Name" value="{{poll.name}}">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="Url" class="control-label">Url</label>
+                        <div class="controls">
+                            <input type="text" class="form-control" id="Url" placeholder="Url" disabled value="{{poll.url}}">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="Question" class="control-label">Question</label>
+                        <div class="controls">
+                            <input type="text" class="form-control" id="Question" placeholder="Question" value="{{poll.question}}">
+                        </div>
+                    </div>
+                </form>
+
+                <h5 class="modal-title">Answers</h5>
+
+                <form id="answers-container" class="form-horizontal" role="form">
+                    {{#each poll.answers}}
+                    <div class="row-fluid">
+					    <div class="span8">
+                            <input type="text" class="form-control control-group answer" placeholder="Answer" answerid="{{_id}}" value="{{name}}">
+                        </div>
+					    <div class="span2">
+                            <span class="form-control control-group">Score: {{score}}</span>
+                        </div>
+					    <div class="span2">
+                            <a class="btn btn-small btn-danger deleteanswer" answerid="{{_id}}" data-toggle="tooltip" data-placement="right" title="" data-original-title="Delete Answer"><i class="icon-ban-circle icon-white"></i></a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </form>
+                <button class="btn btn-warning addmore"><i class="icon-plus icon-white"></i> Add More</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="closeEditPoll btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="saveEditPoll btn btn-primary">Save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</template>

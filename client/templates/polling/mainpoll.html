@@ -1,0 +1,34 @@
+<template name="mainpoll">
+    <div class="question">
+        {{pollquestion}}
+    </div>
+
+    <div class="ans-options">
+        {{#each answers}}
+            {{> answer}}
+        {{/each}}
+
+        <div class="total-votes">
+            <span class="text">Total Votes: </span>
+            <span class="sum">{{sum}}</span>
+        </div>
+    </div>
+
+    {{#if selected_name}}
+    <div class="details">
+        {{#if error}}
+        <div class="alert alert-error">{{error}}</div>
+        {{/if}}
+        <div class="name">{{selected_name}}</div>
+        {{#unless isUserVoted}}
+            <input type="button" class="inc" value="Vote" />
+        {{/unless}}
+    </div>
+    {{/if}}
+
+    {{#unless selected_name}}
+        <div class="none">Click an answer to select</div>
+    {{/unless}}
+
+    <link rel="stylesheet" href="/css/voteapp.css">
+</template>

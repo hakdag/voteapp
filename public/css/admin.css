@@ -1,0 +1,51 @@
+﻿/* admin */
+#sidebar
+{
+    width: 15%;
+    height: 100px;
+    float: left;
+    margin-left: 0.5%;
+}
+
+#header
+{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#header .navbar-inner {
+    background: url("/top-bg.jpg") repeat-x scroll 0 0 #4E4E4E !important;
+}
+
+#header .brand {
+    background: none repeat scroll 0 0 #333333;
+    margin-top: 0 !important;
+    opacity: 0.6;
+    padding: 18px 35.5px;
+    width: 144px;
+}
+
+#container
+{
+}
+
+#main-content
+{
+    width: 80%;
+    float: left;
+}
+
+tr
+{
+    cursor: pointer;
+}
+
+tr.clicked {
+    background-color: #FB9800;
+}
+
+#answers-container .answer
+{
+    width: 90%;
+}
+/* admin */
