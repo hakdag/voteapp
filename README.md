@@ -1,5 +1,5 @@
 voteapp
-=======
+====================
 
 Voting application on Meteor Framework
 
@@ -12,4 +12,8 @@ Project Goals
  + Find out modularity and reusability for Meteor
  + Learn to implement Meteor packages
  + Get familiar with github
+
+Project Demo
+====================
+voteapp.meteor.com
 
