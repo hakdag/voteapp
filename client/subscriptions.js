@@ -7,7 +7,7 @@
 Meteor.subscribe("allpolls");
 
 // "allanswers" publishes data from server's "answers" collection.
-Meteor.subscribe("allanswers");
+var answersHandle = Meteor.subscribe("allanswers");
 
 // "allvotes" publishes data from server's "votes" collection.
 Meteor.subscribe("allvotes");
