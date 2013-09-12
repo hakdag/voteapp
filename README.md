@@ -16,4 +16,5 @@ Project Goals
 Project Demo
 ====================
 voteapp.meteor.com
-
+voteapp.meteor.com/admin 
+credentials: abc@abc.com / 12345678
